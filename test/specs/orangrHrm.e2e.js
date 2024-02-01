@@ -1,4 +1,4 @@
-const { expect } = require('@wdio/globals')
+const { expect, browser } = require('@wdio/globals')
 const LoginPage = require('../orangeHrmObjects/loginPage')
 const featureSearch = require('../orangeHrmObjects/search')
 const maintenance = require('../orangeHrmObjects/maintenance')
@@ -22,7 +22,7 @@ describe('Multiple functionality Testing for OrangeHrm website', () => {
         await maintenance.selectMaintenance()
         
     })
-    it('create Employeee',async  ()=>{
+    it.only('create Employeee',async  ()=>{
         await employee.CreateEmployee()
     })
     it('test all side bar functionalities', async ()=>{
@@ -31,9 +31,9 @@ describe('Multiple functionality Testing for OrangeHrm website', () => {
     it('test that buzz feature is able to posta comment', async ()=>{
         await buzz.buzz();
     })
-    afterEach('logOut', async ()=>{
-        await logout.logout()
-    })
+    // afterEach('logOut', async ()=>{
+    //     await logout.logout()
+    // })
 })
 describe('beforeLogin', ()=>{
     it('tests if forget passowrd works', async ()=>{
