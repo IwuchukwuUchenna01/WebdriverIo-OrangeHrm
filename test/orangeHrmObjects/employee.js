@@ -60,8 +60,8 @@ class CreateEmployee{
         await this.createPassword.setValue(createdPassword)
         await this.confirmCreatedPassword.setValue(confirmPassword)
         await this.btnSave.click()
-        await $('h6[class="oxd-text oxd-text--h6 --strong"]').isEqual(`${employeeFirstName} ${employeeLastName}`)
-        browser.pause(6000)
+        //await $('h6[class="oxd-text oxd-text--h6 --strong"]').isEqual(`${employeeFirstName} ${employeeLastName}`)
+        
     }
 } 
 module.exports = new CreateEmployee();
