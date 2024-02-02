@@ -18,25 +18,24 @@ describe('Multiple functionality Testing for OrangeHrm website', () => {
     })
     it('select maintenance', async () => {
         
-        //await featureSearch.getFeatures();
         await maintenance.selectMaintenance()
         
     })
-    it.only('create Employeee',async  ()=>{
+    it('create employee',async  ()=>{
         await employee.CreateEmployee()
     })
     it('test all side bar functionalities', async ()=>{
         await featureSearch.getFeatures();
     })
-    it('test that buzz feature is able to posta comment', async ()=>{
+    it('test that buzz feature is able to post a comment', async ()=>{
         await buzz.buzz();
     })
-    // afterEach('logOut', async ()=>{
-    //     await logout.logout()
-    // })
+    afterEach('logOut', async ()=>{
+        await logout.logout()
+    })
 })
 describe('beforeLogin', ()=>{
-    it('tests if forget passowrd works', async ()=>{
+    it('tests if forget password works', async ()=>{
         await LoginPage.open()
         await forgotPassword.forgotPassword()
     })

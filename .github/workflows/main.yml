@@ -13,7 +13,7 @@ jobs:
       - name: install npm 
         run: npm install
       - name: Test
-        run: npm run test:local
+        run: npm run wdio
       - name: Upload artifact
         uses: actions/upload-artifact@v1.0.0 
         if: failure()
